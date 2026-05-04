@@ -130,3 +130,12 @@ body {
     color: var(--szin-halvany);
     margin-bottom: 2px;
 }
+
+.stat-cella__ertek {
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+
+.stat-cella__ertek--kek   { color: var(--szin-kek); }
+.stat-cella__ertek--piros { color: var(--szin-piros); }
+.stat-cella__ertek--szurke{ color: var(--szin-halvany); }
