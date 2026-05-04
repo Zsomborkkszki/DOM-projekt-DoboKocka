@@ -25,3 +25,17 @@ function kockaKepetFrissit(kepElem, ertek) {
     kepElem.src = "kepek/kocka" + ertek + ".svg";
     kepElem.alt = ertek + " pontos kocka";
 }
+
+function szamotKiir(szamElem, ertek) {
+    szamElem.innerText = ertek;
+}
+
+function gyoztesMeghataroz(ertek1, ertek2) {
+    if (ertek1 > ertek2) {
+        return { szoveg: "Anna nyert!", osztaly: "kek", kartya: "1" };
+    }
+    if (ertek2 > ertek1) {
+        return { szoveg: "Béla nyert!", osztaly: "piros", kartya: "2" };
+    }
+    return { szoveg: "Döntetlen!", osztaly: "szurke", kartya: null };
+}
