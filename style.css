@@ -189,3 +189,22 @@ body {
     scrollbar-width: thin;
     scrollbar-color: var(--szin-keret) transparent;
 }
+
+.tortenet-sor {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.4rem 1rem;
+    font-size: 0.8rem;
+    border-bottom: 1px solid #151f2d;
+}
+
+.tortenet-sor:last-child { border-bottom: none; }
+
+.tortenet-sor__sorszam  { color: var(--szin-halvany); min-width: 2rem; }
+.tortenet-sor__dobas    { color: #c8c0b0; flex: 1; text-align: center; }
+.tortenet-sor__eredmeny { min-width: 5.5rem; text-align: right; font-weight: 600; }
+
+.tortenet-sor__eredmeny--kek   { color: var(--szin-kek); }
+.tortenet-sor__eredmeny--piros { color: var(--szin-piros); }
+.tortenet-sor__eredmeny--szurke{ color: var(--szin-halvany); }
