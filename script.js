@@ -58,6 +58,18 @@ function kartyakatStilusoz(gyoztes) {
     }
 }
 
+function statisztikatNoveli(gyoztes) {
+    if (gyoztes.kartya === "1") statAnna++;
+    else if (gyoztes.kartya === "2") statBela++;
+    else statDont++;
+}
+
+function statisztikatKiir() {
+    stat1Elem.innerText = statAnna;
+    stat2Elem.innerText = statBela;
+    statDElem.innerText = statDont;
+}
+
 function dobas() {
     korSzam++;
 
@@ -74,6 +86,8 @@ function dobas() {
     eredmenytKiir(gyoztes.szoveg);
     kartyakatStilusoz(gyoztes);
 
+    statisztikatNoveli(gyoztes);
+    statisztikatKiir();
 }
 
 gomb.addEventListener("click", dobas);
