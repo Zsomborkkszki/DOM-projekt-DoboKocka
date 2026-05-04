@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Source+Code+Pro:wght@400;600&display=swap');
+
+:root {
+    --szin-hatter:      #1a1a2e;
+    --szin-kartya:      #0d1b2a;
+    --szin-keret:       #2a3a4a;
+    --szin-keret-ak:    #f0c040;
+    --szin-arany:       #f0c040;
+    --szin-kek:         #60c0f0;
+    --szin-piros:       #f06080;
+    --szin-szoveg:      #e8e0d0;
+    --szin-halvany:     #8a8070;
+    --szin-sor-hatter:  #111f30;
+
+    --font-cim:   'Playfair Display', serif;
+    --font-alap:  'Source Code Pro', monospace;
+
+    --sugar-kartya: 16px;
+    --sugar-kis:    8px;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    background-color: var(--szin-hatter);
+    font-family: var(--font-alap);
+    color: var(--szin-szoveg);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2.5rem 1rem 4rem;
+}
+
+
+.fejlec {
+    text-align: center;
+    margin-bottom: 2.5rem;
+}
+
+.fejlec__cim {
+    font-family: var(--font-cim);
+    font-size: clamp(2rem, 5vw, 3rem);
+    color: var(--szin-arany);
+    letter-spacing: 0.05em;
+}
+
+.fejlec__alcim {
+    font-size: 0.7rem;
+    letter-spacing: 0.35em;
+    text-transform: uppercase;
+    color: var(--szin-halvany);
+    margin-top: 0.25rem;
+}
