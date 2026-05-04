@@ -20,3 +20,8 @@ let statDont = 0;
 function veletlenDobas() {
     return Math.floor(Math.random() * 6) + 1;
 }
+
+function kockaKepetFrissit(kepElem, ertek) {
+    kepElem.src = "kepek/kocka" + ertek + ".svg";
+    kepElem.alt = ertek + " pontos kocka";
+}
