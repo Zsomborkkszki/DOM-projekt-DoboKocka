@@ -78,3 +78,26 @@ body {
     gap: 1rem;
     transition: border-color 0.3s, opacity 0.3s;
 }
+.jatekos-kartya.nyertes {
+    border-color: var(--szin-keret-ak);
+}
+
+.jatekos-kartya.vesztes {
+    opacity: 0.45;
+}
+.jatekos-kartya__cimke {
+    font-size: 0.65rem;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--szin-halvany);
+}
+
+.jatekos-kartya__nev {
+    font-family: var(--font-cim);
+    font-size: 1.3rem;
+}
+
+.jatekos-kartya__kocka {
+    width: 100px;
+    height: 100px;
+}
