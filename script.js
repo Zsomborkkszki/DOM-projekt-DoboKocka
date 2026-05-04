@@ -70,6 +70,36 @@ function statisztikatKiir() {
     statDElem.innerText = statDont;
 }
 
+function tortenetSortLetrehoz(kor, ertek1, ertek2, gyoztes) {
+    const li = document.createElement("li");
+    li.className = "tortenet-sor";
+
+    const sorszam = document.createElement("span");
+    sorszam.className = "tortenet-sor__sorszam";
+    sorszam.innerText = "#" + kor;
+
+    const dobas = document.createElement("span");
+    dobas.className = "tortenet-sor__dobas";
+    dobas.innerText = "Anna: " + ertek1 + "  ·  Béla: " + ertek2;
+
+    const eredmeny = document.createElement("span");
+    eredmeny.className = "tortenet-sor__eredmeny tortenet-sor__eredmeny--" + gyoztes.osztaly;
+    eredmeny.innerText = gyoztes.szoveg;
+
+    li.appendChild(sorszam);
+    li.appendChild(dobas);
+    li.appendChild(eredmeny);
+
+    return li;
+}
+
+function tortenetsorHozzaad(kor, ertek1, ertek2, gyoztes) {
+    const ujSor = tortenetSortLetrehoz(kor, ertek1, ertek2, gyoztes);
+    lista.insertBefore(ujSor, lista.firstChild);
+
+    dobsszamLab.innerText = kor + " dobás";
+}
+
 function dobas() {
     korSzam++;
 
@@ -88,6 +118,8 @@ function dobas() {
 
     statisztikatNoveli(gyoztes);
     statisztikatKiir();
+
+    tortenetsorHozzaad(korSzam, ertek1, ertek2, gyoztes);
 }
 
 gomb.addEventListener("click", dobas);
