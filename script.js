@@ -39,3 +39,41 @@ function gyoztesMeghataroz(ertek1, ertek2) {
     }
     return { szoveg: "Döntetlen!", osztaly: "szurke", kartya: null };
 }
+
+function eredmenytKiir(szoveg) {
+    eredmenyElem.innerText = szoveg;
+}
+
+
+function kartyakatStilusoz(gyoztes) {
+    kartya1.classList.remove("nyertes", "vesztes");
+    kartya2.classList.remove("nyertes", "vesztes");
+
+    if (gyoztes.kartya === "1") {
+        kartya1.classList.add("nyertes");
+        kartya2.classList.add("vesztes");
+    } else if (gyoztes.kartya === "2") {
+        kartya2.classList.add("nyertes");
+        kartya1.classList.add("vesztes");
+    }
+}
+
+function dobas() {
+    korSzam++;
+
+    const ertek1 = veletlenDobas();
+    const ertek2 = veletlenDobas();
+    const gyoztes = gyoztesMeghataroz(ertek1, ertek2);
+
+    kockaKepetFrissit(kep1, ertek1);
+    kockaKepetFrissit(kep2, ertek2);
+
+    szamotKiir(szam1, ertek1);
+    szamotKiir(szam2, ertek2);
+
+    eredmenytKiir(gyoztes.szoveg);
+    kartyakatStilusoz(gyoztes);
+
+}
+
+gomb.addEventListener("click", dobas);
