@@ -101,3 +101,32 @@ body {
     width: 100px;
     height: 100px;
 }
+.vs-jelveny {
+    font-family: var(--font-cim);
+    font-size: 1.8rem;
+    color: var(--szin-keret);
+    flex-shrink: 0;
+    user-select: none;
+}
+.statisztika {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+}
+.stat-cella {
+    background: var(--szin-kartya);
+    border: 1px solid var(--szin-keret);
+    border-radius: var(--sugar-kis);
+    padding: 0.5rem 1.2rem;
+    text-align: center;
+    min-width: 88px;
+}
+
+.stat-cella__cimke {
+    font-size: 0.6rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--szin-halvany);
+    margin-bottom: 2px;
+}
