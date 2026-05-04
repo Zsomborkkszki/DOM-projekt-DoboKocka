@@ -56,3 +56,12 @@ body {
     color: var(--szin-halvany);
     margin-top: 0.25rem;
 }
+.arena {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: clamp(1rem, 4vw, 3rem);
+    width: 100%;
+    max-width: 680px;
+    margin-bottom: 1.5rem;
+}
