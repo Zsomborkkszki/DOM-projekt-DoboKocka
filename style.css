@@ -89,7 +89,6 @@ body {
     font-size: 0.65rem;
     letter-spacing: 0.25em;
     text-transform: uppercase;
-    color: var(--szin-halvany);
 }
 
 .jatekos-kartya__nev {
@@ -127,7 +126,6 @@ body {
     font-size: 0.6rem;
     letter-spacing: 0.2em;
     text-transform: uppercase;
-    color: var(--szin-halvany);
     margin-bottom: 2px;
 }
 
@@ -138,7 +136,6 @@ body {
 
 .stat-cella__ertek--kek   { color: var(--szin-kek); }
 .stat-cella__ertek--piros { color: var(--szin-piros); }
-.stat-cella__ertek--szurke{ color: var(--szin-halvany); }
 
 .dobas-gomb {
     background: var(--szin-arany);
@@ -201,10 +198,9 @@ body {
 
 .tortenet-sor:last-child { border-bottom: none; }
 
-.tortenet-sor__sorszam  { color: var(--szin-halvany); min-width: 2rem; }
+.tortenet-sor__sorszam  { min-width: 2rem; }
 .tortenet-sor__dobas    { color: #c8c0b0; flex: 1; text-align: center; }
 .tortenet-sor__eredmeny { min-width: 5.5rem; text-align: right; font-weight: 600; }
 
 .tortenet-sor__eredmeny--kek   { color: var(--szin-kek); }
 .tortenet-sor__eredmeny--piros { color: var(--szin-piros); }
-.tortenet-sor__eredmeny--szurke{ color: var(--szin-halvany); }
